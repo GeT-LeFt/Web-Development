@@ -13,16 +13,16 @@ app.post("/", function (req, res) {
   var num1 = Number(req.body.n1);
   var num2 = Number(req.body.n2);
   var result = num1 + num2;
-  res.send("111" + result);
+  res.send("result is " + result);
 });
 
-app.get("/bmiCalculator", function (req, res) {
+app.get("/bmicalculator", function (req, res) {
   res.sendFile(__dirname + "/bmiCalculator.html");
 });
 
-app.post("/bmiCalculator", function (req, res) {
+app.post("/bmicalculator", function (req, res) {
   var weight = Number(req.body.w1);
-  var height = Number(req.body.h2);
+  var height = Number(req.body.h1);
   var result = weight + height;
   res.send("Your BMI is " + result);
 });
